@@ -1,0 +1,105 @@
+@font-face {
+    font-family: 'IranYekanX';
+    src:  url('font/woff/IRANYekanX-Regular.woff') format('woff'),
+          url('font/woff2/IRANYekanX-Regular.woff2') format('woff2');
+  }
+  
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+:root {
+    --whiteColor: #fff;
+    --inputColor: #767676 ;
+}
+
+body {
+    background-color: #f5f5f5 ;
+    font-family: IranYekanX;
+    font-weight: 300;
+  }
+  
+  .container {
+    display: flex ;
+    justify-content: center ;
+    align-items: center ;
+  }
+  
+  .box {
+    width: 30rem ;
+    height: 14rem ;
+    margin: 110px auto ;
+    border-radius: 2rem;
+    background: var(--whiteColor) ;
+    box-shadow: 4px 10px 14px 5px rgba(0,0,0,0.1);
+  }
+  
+  #text {
+    direction: rtl ;
+    text-align: center ;
+    margin: 40px auto ;
+    font-weight: 400 ;
+  }
+  
+  .input-group {
+    position: relative;
+    width: 310px ;
+    height: 200px ;
+    margin: -30px auto ;
+  }
+  
+  .input {
+    padding: 10px ;
+    border: none ;
+    border-radius: 0.5rem ;
+    font-family: IranYekanX ;
+    color: var(--inputColor) ;
+    background-color: transparent ;
+    outline: 0.12rem solid #adadad ;
+    width: 300px ;
+    direction: rtl ;
+    text-align: right ;
+  }
+  
+  .input-label {
+    position: absolute ;
+    top: -3px ;
+    right: 30px ;
+    transform: translate(10px, 10px);
+    transition: transform .25s ;
+    direction: rtl ;
+    text-align: right ;
+    color: var(--inputColor) ;
+  }
+  
+  .input:focus+.input-label,
+  .input:valid+.input-label {
+    transform: translate(10px, -10px) scale(.8) ;
+    color: #d1c5fc ;
+    padding-inline: 5px ;
+    background-color: var(--whiteColor) ;
+  }
+  
+  .input:is(:focus, :valid, :checked, :active) {
+    outline-color: #d1c5fc ;
+    font-family: IranYekanX ;
+    color: var(--inputColor) ;
+    background-color: var(--whiteColor) ;
+  }
+  
+  #btn {
+    width: 120px ;
+    height: 36px ;
+    border: none ;
+    border-radius: 0.5rem ;
+    font-family: IranYekanX ;
+    color: var(--whiteColor) ;
+    background-color: #00aaeb ;
+    direction: rtl ;
+    margin-left: 100px ;
+    cursor: pointer ;
+    margin-top: 30px;
+  }
+  
